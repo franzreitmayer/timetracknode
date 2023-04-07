@@ -1,36 +1,32 @@
-doctype html 
-html(lang="de")
-    head 
-        meta(charset="utf-8")
-        title Timetrackings List 
-        link(rel="stylesheet", type="text/css" href="../../resources/css/styles.css")
-    body 
-        table 
-            thead 
+extends ../../../generic/html_base
+block content
+    table 
+        thead 
+            tr 
+                th ID 
+                th Datum 
+                th Von
+                th Bis 
+                th Referenz 
+                th Tag 
+                th Beschreibung (kurz)
+                th Beschreibung (lang)
+                th 
+                th
+        tbody
+            - for(let tracking of trackings)
                 tr 
-                    th ID 
-                    th Datum 
-                    th Von
-                    th Bis 
-                    th Referenz 
-                    th Tag 
-                    th Beschreibung (kurz)
-                    th Beschreibung (lang)
-                    th 
-                    th
-            tbody
-                - for(let tracking of trackings)
-                    tr 
-                        td #{tracking.id}
-                        td #{tracking.date}
-                        td #{tracking.from}
-                        td #{tracking.to}
-                        td #{tracking.ref} 
-                        td #{tracking.tag}
-                        td #{tracking.shortDescription} 
-                        td #{tracking.longDescription} 
-                        td
-                            a(href='/trackings/edit/' + tracking.id ) Bearbeiten
-                        td 
-                            a(href='/trackings/delete/' + tracking.id ) Löschen
+                    td #{tracking.id}
+                    td #{tracking.date}
+                    td #{tracking.from}
+                    td #{tracking.to}
+                    td #{tracking.ref} 
+                    td #{tracking.tag}
+                    td #{tracking.shortDescription} 
+                    td #{tracking.longDescription} 
+                    td
+                        a(href='/trackings/edit/' + tracking.id ) Bearbeiten
+                    td 
+                        a(href='/trackings/delete/' + tracking.id ) Löschen
+    a(href='/trackings/create/') Neu
                 

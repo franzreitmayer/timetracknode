@@ -1,3 +1,17 @@
 extends ../../../generic/html_base
 block content
-    form(action="/")
+    form(action="/frontend/trackings/update" method="POST")
+    p Day: 
+        input(type="text", name="day")
+    p From: 
+        input(type="text", name="from")
+    p To: 
+        input(type="text", name="to")
+    p Tag: 
+        input(type="text", name="tag")
+    p Short Descr.: 
+        input(type="text", name="shortDescription")
+    p Long Descr.: 
+        input(type="text", name="longDescription")
+    input(type="submit" value="Ok")
+    

@@ -14,6 +14,10 @@ router.get("/trackings/list", (req, res) => {
   }
 );
 
+router.get("/trackings/edit/:id?", function(req, res) {
+  res.render(__dirname + "/trackings/view/form.pug");
+});
+
 
 
 module.exports =

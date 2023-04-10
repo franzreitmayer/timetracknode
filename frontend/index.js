@@ -14,6 +14,14 @@ router.get("/trackings/list", (req, res) => {
   }
 );
 
+router.get("/trackings/edit/:id?", function(req, res) {
+  const id = req.params.id;
+  console.log(`ID: ${id}`);
+  const tracking = model.getById(id);
+  console.log(tracking);
+  res.render(__dirname + "/trackings/view/form.pug", { tracking });
+});
+
 
 
 module.exports =

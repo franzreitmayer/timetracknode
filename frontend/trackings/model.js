@@ -1,6 +1,6 @@
 const data = [
     {
-        id: 1,
+        id: "1",
         date: '2020-01-01',
         from: '08:00',
         to: '09:00',
@@ -10,7 +10,7 @@ const data = [
         longDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod'
     },
     {
-        id: 2,
+        id: "2",
         date: '2020-01-01',
         from: '09:00',
         to: '10:00',
@@ -20,7 +20,7 @@ const data = [
         longDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod'
     },
     {
-        id: 3,
+        id: "3",
         date: '2020-01-01',
         from: '10:00',
         to: '12:00',
@@ -30,7 +30,7 @@ const data = [
         longDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod'
     },
     {
-        id: 4,
+        id: "4",
         date: '2020-01-01',
         from: '13:00',
         to: '16:00',

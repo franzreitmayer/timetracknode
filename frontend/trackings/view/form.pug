@@ -1,3 +1,29 @@
 extends ../../../generic/html_base
 block content
-    form(action="/")
+    form(action="/frontend/trackings/update", method="POST")
+    div
+        input(type="hidden", name="id", value="" + tracking.id)
+        label(for="day") Day 
+        input(type="text" name="day", value="" + tracking.date)
+        
+        label(for="from") From 
+        input(type="text", name="from", value="" + tracking.from)
+        
+        label(for="to") To    
+        input(type="text", name="to", value="" + tracking.to)
+        
+        label(for="tag") Tag
+        input(type="text", name="tag", value="" + tracking.tag)
+        
+        label(for="shortDescription") Short Description 
+        input(type="text", name="shortDescription", value="" + tracking.shortDescription)
+        
+        label(for="longDescription") Long Description
+        input(type="text", name="longDescription" value="" + tracking.longDescription)
+
+        label(for="ok")   
+        input(type="submit" value="Ok" name="ok")
+        
+        label(for="cancel") 
+        input(type="button" value="Abbrechen" name="cancel")
+        
